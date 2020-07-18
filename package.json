@@ -1,0 +1,22 @@
+{
+  "name": "file-analyzer",
+  "version": "1.0.0",
+  "description": "file-analyzer",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanRiffel/file-analyzer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeanRiffel/file-analyzer/issues"
+  },
+  "homepage": "https://github.com/JeanRiffel/file-analyzer#readme"
+}

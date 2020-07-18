@@ -1,0 +1,80 @@
+{"model" : { "name" : "doccob-proceda",
+             "version" : 3.0,
+             "lines" : [
+                    {
+                        "id" : "000",
+                        "name" : "Cabeçalho de intercâmbio",
+                        "length" : 170,
+                        "repeat" : 1,
+                        "fields" : [
+                            {
+                                "order" : 1,
+                                "name" : "Identificador de registro",
+                                "dataType" : "number",
+                                "size" : 3,
+                                "position" : 1,
+                                "required" : true,
+                                "description" : "000"
+                            },
+                            {
+                                "order" : 2,
+                                "name" : "Identificação do remetente",
+                                "dataType" : "string",
+                                "size" : 35,
+                                "position" : 4,
+                                "required" : true,
+                                "description" : "Nome da caixa postal do remetente"
+                            },
+                            {
+                                "order" : 3,
+                                "name" : "Identificação do destinatário",
+                                "dataType" : "string",
+                                "size" : 35,
+                                "position" : 39,
+                                "required" : true,
+                                "description" : "Nome da caixa postal do destinatário"
+                            },
+                            {
+                                "order" : 4,
+                                "name" : "Data",
+                                "dataType" : "number",
+                                "size" : 6,
+                                "position" : 74,
+                                "required" : true,
+                                "description" : "000"
+                            },
+                            {
+                                "order" : 5,
+                                "name" : "Hora",
+                                "dataType" : "number",
+                                "size" : 4,
+                                "position" : 80,
+                                "required" : true,
+                                "description" : "000"
+                            },
+                            {
+                                "order" : 6,
+                                "name" : "Identificação de intercâmbio",
+                                "dataType" : "string",
+                                "size" : 12,
+                                "position" : 84,
+                                "required" : true,
+                                "description" : "000"
+                            },
+                            {
+                                "order" : 7,
+                                "name" : "Filler",
+                                "dataType" : "string",
+                                "size" : 75,
+                                "position" : 96,
+                                "required" : false,
+                                "description" : "000"
+                            }
+                        ]
+
+                    }
+
+
+             ]
+    }
+}
