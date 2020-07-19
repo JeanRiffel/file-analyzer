@@ -12,7 +12,14 @@ The file-analyzer is a NodeJs app for analysis a structure of a file which must 
 
 # How it works
 
-* 1 - Call the app using node app.js sourceFile.txt
+* 1 - Call the app using node app.js "sourceFile" "typeFile"
+
+    #### Parameters
+    * - sourceFile - File which the user want to analyze.
+    * - typeFile   - The type of files are: 
+                        notfis_30  : 1
+                        doccob_30  : 2
+                        ocoren_30  : 3
 
 
 

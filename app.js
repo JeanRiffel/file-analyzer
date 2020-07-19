@@ -1,25 +1,23 @@
-const fs = require('fs');
-
-const loadFile = (sourceFile)=>{
-    fs.readFile(file, "utf-8" , (err, data)=>{
-        console.log(data);
-    });
-}
-
-const loadModelJSON = ()=>{
-    const data  =  fs.readFileSync('model.json');
-    const model = JSON.parse(data);
-    return model;
-};
+const fileTypes = require('./util').fileTypes;
+const doccob30    = require('./proceda/doccob/doccob-30');
 
 const main = ()=>{
-    console.log("Initializing...");    
-    const file = process.argv[2];
-    const model = loadModelJSON();
+    try{
+        console.log("Initializing...");    
+        const sourceFile = process.argv[2];             // sourceFile
+        const fileType   = parseInt(process.argv[3]);   // fileType
 
-    console.log(model);
-
+        switch (fileType){
+            case fileTypes.doccob_30 :
+                doccob30.process(sourceFile);
+                break;
+            default : 
+                throw "File type is not valid";
+        }
+        
+    }catch(error){
+        console.error(`Sorry something went wrong...\n${error}`);
+    }
 }
-
 
 main();

@@ -72,9 +72,41 @@
                             }
                         ]
 
+                    },
+                    {
+                        "id" : "350",
+                        "name" : "Cabeçalho de documento",
+                        "length" : 170,
+                        "repeat" : 200,
+                        "fields" : [
+                            {
+                                "order" :1 ,
+                                "name" : "Identificador de registro",
+                                "dataType" : "number",
+                                "size" : 3,
+                                "position" : 1,
+                                "required" : true,
+                                "description" : "350"
+                            },
+                            {
+                                "order" : 2,
+                                "name" : "Identificação de documento",
+                                "dataType" : "string",
+                                "size" : 14,
+                                "position" : 4,
+                                "required" : true,
+                                "description" : "Sugestão COBRA190706202"
+                            },
+                            {
+                                "order" : 3,
+                                "name" : "Filler",
+                                "dataType" : "string",
+                                "size" : 153,
+                                "position" : 18,
+                                "required" : true,
+                                "description" : "Nome da caixa postal do destinatário"
+                            }]
                     }
-
-
              ]
     }
 }
