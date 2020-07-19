@@ -1,4 +1,6 @@
 const fs = require('fs');
+const readline = require('readline');
+const stream = require('stream');
 
 fileTypes = {
     notfis_30  : 1,
@@ -23,17 +25,14 @@ const loadModelJSON = (model)=>{
 const loadFile = (sourceFile)=>{
     return new Promise((resolve, reject)=>{
         try{
-             fs.readFile(sourceFile, "utf-8" , (err, data)=>{
-                if(err) reject(err);  
-                resolve(data);
-            });
+            let instream = fs.createReadStream(sourceFile);
+            let outstream = new stream();
+            resolve(readline.createInterface(instream, outstream));
         }catch(error){
             reject(error);
         }
     });
 };
-
-
 
 module.exports = {
     fileTypes,
