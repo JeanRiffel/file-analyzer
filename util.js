@@ -34,9 +34,37 @@ const loadFile = (sourceFile)=>{
     });
 };
 
+const getObjectByIdLine = (id, modelJSON )=>{
+    const model = modelJSON.model.lines.filter( (item)=>{
+        return item.id === id;
+    })
+    if(model.length > 0){
+        return model[0];
+    }
+    return {};
+    
+}
+
+const checkExitsIdinLine = (line , modelJSON)=>{
+
+    const linesModel = modelJSON.model.lines.filter( (item)=>{
+        
+        const id = line.substr(item.startPosition-1, item.size);
+        if(item.id === id){
+            return item;
+        }
+
+    });
+    if(linesModel.length > 0) return linesModel[0].id;
+    return 0;
+}
+
+
 module.exports = {
     fileTypes,
     models,
     loadModelJSON,
     loadFile,
+    getObjectByIdLine,
+    checkExitsIdinLine,
 }
