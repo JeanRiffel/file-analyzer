@@ -6,13 +6,15 @@
                         "name" : "Cabeçalho de intercâmbio",
                         "length" : 170,
                         "repeat" : 1,
+                        "startPosition" : 1,
+                        "size" : 3,
                         "fields" : [
                             {
                                 "order" : 1,
                                 "name" : "Identificador de registro",
                                 "dataType" : "number",
                                 "size" : 3,
-                                "position" : 1,
+                                "startPosition" : 1,
                                 "required" : true,
                                 "description" : "000"
                             },
@@ -21,7 +23,7 @@
                                 "name" : "Identificação do remetente",
                                 "dataType" : "string",
                                 "size" : 35,
-                                "position" : 4,
+                                "startPosition" : 4,
                                 "required" : true,
                                 "description" : "Nome da caixa postal do remetente"
                             },
@@ -30,7 +32,7 @@
                                 "name" : "Identificação do destinatário",
                                 "dataType" : "string",
                                 "size" : 35,
-                                "position" : 39,
+                                "startPosition" : 39,
                                 "required" : true,
                                 "description" : "Nome da caixa postal do destinatário"
                             },
@@ -39,7 +41,7 @@
                                 "name" : "Data",
                                 "dataType" : "number",
                                 "size" : 6,
-                                "position" : 74,
+                                "startPosition" : 74,
                                 "required" : true,
                                 "description" : "000"
                             },
@@ -48,7 +50,7 @@
                                 "name" : "Hora",
                                 "dataType" : "number",
                                 "size" : 4,
-                                "position" : 80,
+                                "startPosition" : 80,
                                 "required" : true,
                                 "description" : "000"
                             },
@@ -57,7 +59,7 @@
                                 "name" : "Identificação de intercâmbio",
                                 "dataType" : "string",
                                 "size" : 12,
-                                "position" : 84,
+                                "startPosition" : 84,
                                 "required" : true,
                                 "description" : "000"
                             },
@@ -66,7 +68,7 @@
                                 "name" : "Filler",
                                 "dataType" : "string",
                                 "size" : 75,
-                                "position" : 96,
+                                "startPosition" : 96,
                                 "required" : false,
                                 "description" : "000"
                             }
@@ -78,13 +80,15 @@
                         "name" : "Cabeçalho de documento",
                         "length" : 170,
                         "repeat" : 200,
+                        "startPosition" : 1,
+                        "size" : 3,                        
                         "fields" : [
                             {
                                 "order" :1 ,
                                 "name" : "Identificador de registro",
                                 "dataType" : "number",
                                 "size" : 3,
-                                "position" : 1,
+                                "startPosition" : 1,
                                 "required" : true,
                                 "description" : "350"
                             },
@@ -93,7 +97,7 @@
                                 "name" : "Identificação de documento",
                                 "dataType" : "string",
                                 "size" : 14,
-                                "position" : 4,
+                                "startPosition" : 4,
                                 "required" : true,
                                 "description" : "Sugestão COBRA190706202"
                             },
@@ -102,7 +106,7 @@
                                 "name" : "Filler",
                                 "dataType" : "string",
                                 "size" : 153,
-                                "position" : 18,
+                                "startPosition" : 18,
                                 "required" : true,
                                 "description" : "Nome da caixa postal do destinatário"
                             }]
