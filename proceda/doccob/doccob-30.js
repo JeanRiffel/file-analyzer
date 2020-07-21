@@ -12,14 +12,10 @@ exports.process = async (sourceFile)=>{
         file.on('line', (line)=>{
             
             id = line.substr(0,3);
-            
-            
-
+                            
             console.log(line);
 
         });      
-
-
 
     }catch(error){
         throw `Tried to process file doccob 3.0 ${error} `;

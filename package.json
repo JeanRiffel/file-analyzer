@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/JeanRiffel/file-analyzer/issues"
   },
-  "homepage": "https://github.com/JeanRiffel/file-analyzer#readme"
+  "homepage": "https://github.com/JeanRiffel/file-analyzer#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
