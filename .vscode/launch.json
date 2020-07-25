@@ -9,7 +9,7 @@
             "request": "launch",
             "type": "node",            
             "program": "${workspaceFolder}/app.js",
-            "args": ["doccob.txt", "2"]
+            "args": ["doccob.txt", "2" ]
         }
     ]
 }

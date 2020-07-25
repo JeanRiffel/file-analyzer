@@ -1,6 +1,6 @@
 {"model" : { "name" : "doccob-proceda",
              "version" : 3.0,
-             "lines" : [
+             "lines" : [                    
                     {
                         "id" : "000",
                         "name" : "Cabeçalho de intercâmbio",
@@ -110,7 +110,494 @@
                                 "required" : true,
                                 "description" : "Nome da caixa postal do destinatário"
                             }]
+                    },
+                    {
+                        "id" : "351",
+                        "name" : "Dados da transportadora",
+                        "length" : 170,
+                        "repeat" : 1,
+                        "startPosition" : 1,
+                        "size" : 3,
+                        "fields" : [
+                            {
+                                "order" : 1,
+                                "name" : "Identificador de registro",
+                                "dataType" : "number",
+                                "size" : 3,
+                                "startPosition" : 1,
+                                "required" : true,
+                                "description" : "000"
+                            },
+                            {
+                                "order" : 2,
+                                "name" : "CGC",
+                                "dataType" : "number",
+                                "size" : 14,
+                                "startPosition" : 4,
+                                "required" : true,
+                                "description" : ""
+                            },                            
+                            {
+                                "order" : 3,
+                                "name" : "Razão Social",
+                                "dataType" : "string",
+                                "size" : 40,
+                                "startPosition" : 18,
+                                "required" : true,
+                                "description" : ""
+                            } ,              
+                            {
+                                "order" : 4,
+                                "name" : "Filler",
+                                "dataType" : "string",
+                                "size" : 113,
+                                "startPosition" : 58,
+                                "required" : true,
+                                "description" : ""
+                            }]
+                    },
+                    {
+                        "id" : "352",
+                        "name" : "Documentos de cobrança",
+                        "length" : 170,
+                        "repeat" : 1,
+                        "startPosition" : 1,
+                        "size" : 3,
+                        "fields" : [
+                            {
+                                "order" : 1,
+                                "name" : "Identificador de registro",
+                                "dataType" : "number",
+                                "size" : 3,
+                                "startPosition" : 1,
+                                "required" : true,
+                                "description" : "352"
+                            },
+                            {
+                                "order" : 2,
+                                "name" : "Filial Emissora Documento",
+                                "dataType" : "String",
+                                "size" : 10,
+                                "startPosition" : 4,
+                                "required" : true,
+                                "description" : ""
+                            },                            
+                            {
+                                "order" : 3,
+                                "name" : "Tipo de documento de cobrança",
+                                "dataType" : "number",
+                                "size" : 1,
+                                "startPosition" : 14,
+                                "required" : true,
+                                "description" : ""
+                            },               
+                            {
+                                "order" : 4,
+                                "name" : "Série do documento de cobrança",
+                                "dataType" : "string",
+                                "size" : 3,
+                                "startPosition" : 15,
+                                "required" : true,
+                                "description" : ""
+                            }                       
+                            ,               
+                            {
+                                "order" : 5,
+                                "name" : "Número do documento de cobrança",
+                                "dataType" : "number",
+                                "size" : 10,
+                                "startPosition" : 18,
+                                "required" : true,
+                                "description" : ""
+                            }                      
+                            ,               
+                            {
+                                "order" : 6,
+                                "name" : "Data de Emissão",
+                                "dataType" : "number",
+                                "size" : 8,
+                                "startPosition" : 28,
+                                "required" : true,
+                                "description" : ""
+                            }                                                                               
+                            ,               
+                            {
+                                "order" : 7,
+                                "name" : "Data de Vencimento",
+                                "dataType" : "number",
+                                "size" : 8,
+                                "startPosition" : 36,
+                                "required" : true,
+                                "description" : ""                            
+                            }                     
+                            ,               
+                            {
+                                "order" : 8,
+                                "name" : "Valor do documento de cobrança",
+                                "dataType" : "number",
+                                "size" : 15,
+                                "startPosition" : 44,
+                                "required" : true,
+                                "description" : ""
+                            }                                                                               
+                            ,               
+                            {
+                                "order" : 9,
+                                "name" : "Tipo de cobrança",
+                                "dataType" : "string",
+                                "size" : 3,
+                                "startPosition" : 59,
+                                "required" : true,
+                                "description" : ""
+                            }                                                                               
+                            ,               
+                            {
+                                "order" : 10,
+                                "name" : "Valor Total do ICMS",
+                                "dataType" : "number",
+                                "size" : 15,
+                                "startPosition" : 62,
+                                "required" : true,
+                                "description" : ""
+                            }                       
+                            ,               
+                            {
+                                "order" : 11,
+                                "name" : "Valor Juros por Dia de Atraso",
+                                "dataType" : "string",
+                                "size" : 15,
+                                "startPosition" : 77,
+                                "required" : true,
+                                "description" : ""
+                            }                       
+                            ,               
+                            {
+                                "order" : 12,
+                                "name" : "Data Limite para pgto com desconto",
+                                "dataType" : "number",
+                                "size" : 8,
+                                "startPosition" : 92,
+                                "required" : true,
+                                "description" : ""
+                            }                       
+                            ,               
+                            {
+                                "order" : 13,
+                                "name" : "Valor do desconto",
+                                "dataType" : "number",
+                                "size" : 15,
+                                "startPosition" : 100,
+                                "required" : true,
+                                "description" : ""
+                            }                        
+                            ,               
+                            {
+                                "order" : 14,
+                                "name" : "Identificação do agente de cobrança",
+                                "dataType" : "string",
+                                "size" : 35,
+                                "startPosition" : 115,
+                                "required" : true,
+                                "description" : ""
+                            }
+                            ,               
+                            {
+                                "order" : 15,
+                                "name" : "Número da agência bancária",
+                                "dataType" : "number",
+                                "size" : 4,
+                                "startPosition" : 150,
+                                "required" : true,
+                                "description" : ""
+                            }                        
+                            ,               
+                            {
+                                "order" : 16,
+                                "name" : "Digito verificador número da agência",
+                                "dataType" : "string",
+                                "size" : 1,
+                                "startPosition" : 154,
+                                "required" : true,
+                                "description" : ""                                
+                            }                     
+                            ,               
+                            {
+                                "order" : 17,
+                                "name" : "Número da conta corrente",
+                                "dataType" : "number",
+                                "size" : 10,
+                                "startPosition" : 155,
+                                "required" : true,
+                                "description" : ""
+                            }                        
+                            ,               
+                            {
+                                "order" : 18,
+                                "name" : "Digito verificador da conta corrente",
+                                "dataType" : "string",
+                                "size" : 2,
+                                "startPosition" : 165,
+                                "required" : true,
+                                "description" : ""
+                            }                        
+                            ,               
+                            {
+                                "order" : 19,
+                                "name" : "Ação do documento",
+                                "dataType" : "string",
+                                "size" : 1,
+                                "startPosition" : 167,
+                                "required" : true,
+                                "description" : ""
+                            }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                            ,               
+                            {
+                                "order" : 20,
+                                "name" : "Filler",
+                                "dataType" : "string",
+                                "size" : 3,
+                                "startPosition" : 168,
+                                "required" : true,
+                                "description" : ""
+                            }]
+
+                    },
+                    {
+                        "id" : "353",
+                        "name" : "Conhecimento em cobrança",
+                        "length" : 170,
+                        "repeat" : 1,
+                        "startPosition" : 1,
+                        "size" : 3,
+                        "fields" : [
+                            {
+                                "order" : 1,
+                                "name" : "Identificador de registro",
+                                "dataType" : "number",
+                                "size" : 3,
+                                "startPosition" : 1,
+                                "required" : true,
+                                "description" : "353"
+                            },
+                            {
+                                "order" : 2,
+                                "name" : "Filial Emissora do documento",
+                                "dataType" : "string",
+                                "size" : 10,
+                                "startPosition" : 4,
+                                "required" : true,
+                                "description" : "353"
+                            },                            
+                            {
+                                "order" : 3,
+                                "name" : "Série do Conhecimento",
+                                "dataType" : "string",
+                                "size" : 5,
+                                "startPosition" : 14,
+                                "required" : true,
+                                "description" : "353"
+                            },                            
+                            {
+                                "order" : 4,
+                                "name" : "Número do Conhecimento",
+                                "dataType" : "string",
+                                "size" : 12,
+                                "startPosition" : 19,
+                                "required" : true,
+                                "description" : "353"
+                            },
+                            {
+                                "order" : 5,
+                                "name" : "Valor do frete",
+                                "dataType" : "number",
+                                "size" : 12,
+                                "startPosition" : 31,
+                                "required" : true,
+                                "description" : "353"
+                            },
+                            {
+                                "order" : 6,
+                                "name" : "Data da emissão do documento",
+                                "dataType" : "number",
+                                "size" : 8,
+                                "startPosition" : 46,
+                                "required" : true,
+                                "description" : "353"
+                            }
+                            ,
+                            {
+                                "order" : 7,
+                                "name" : "CGC do remetente - emisso da NF",
+                                "dataType" : "number",
+                                "size" : 14,
+                                "startPosition" : 54,
+                                "required" : true,
+                                "description" : "353"
+                            }                       
+                            ,
+                            {
+                                "order" : 8,
+                                "name" : "CGC do destinatário da NF",
+                                "dataType" : "number",
+                                "size" : 14,
+                                "startPosition" :  68,
+                                "required" : true,
+                                "description" : "353"
+                            }                        
+                            ,
+                            {
+                                "order" : 9,
+                                "name" : "CGC do emissor do conhecimento",
+                                "dataType" : "number",
+                                "size" : 14,
+                                "startPosition" :  82,
+                                "required" : true,
+                                "description" : "353"
+                            }                        
+                            ,
+                            {
+                                "order" : 10,
+                                "name" : "Filler",
+                                "dataType" : "string",
+                                "size" : 75,
+                                "startPosition" :  96,
+                                "required" : true,
+                                "description" : "353"
+                            }]
+                    }, 
+                    {
+                        "id" : "354",
+                        "name" : "Notas fiscais de cobrança",
+                        "length" : 170,
+                        "repeat" : 1,
+                        "startPosition" : 1,
+                        "size" : 3,
+                        "fields" : [
+                            {
+                                "order" : 1,
+                                "name" : "Identificador de registro",
+                                "dataType" : "number",
+                                "size" : 3,
+                                "startPosition" : 1,
+                                "required" : true,
+                                "description" : "353"
+                            },
+                            {
+                                "order" : 2,
+                                "name" : "Série do documento de cobrança",
+                                "dataType" : "string",
+                                "size" : 3,
+                                "startPosition" : 4,
+                                "required" : true,
+                                "description" : ""
+                            }                       
+                            ,               
+                            {
+                                "order" : 3,
+                                "name" : "Número da nota fiscal",
+                                "dataType" : "number",
+                                "size" : 8,
+                                "startPosition" : 7,
+                                "required" : true,
+                                "description" : ""
+                            }                      
+                            ,               
+                            {
+                                "order" : 4,
+                                "name" : "Data de Emissão da Nota Fiscal",
+                                "dataType" : "number",
+                                "size" : 8,
+                                "startPosition" : 15,                                
+                                "description" : ""
+                            }                                                                             
+                            ,               
+                            {
+                                "order" : 5,
+                                "name" : "Peso da Nota Fiscal",
+                                "dataType" : "number",
+                                "size" : 7,
+                                "startPosition" : 23,
+                                "required" : true,
+                                "description" : ""                            
+                            }                     
+                            ,               
+                            {
+                                "order" : 6,
+                                "name" : "Valor da mercadoria da nota fiscal",
+                                "dataType" : "number",
+                                "size" : 15,
+                                "startPosition" : 30,
+                                "required" : true,
+                                "description" : ""
+                            },               
+                            {
+                                "order" : 7,
+                                "name" : "CGC emissor da nota fiscal",
+                                "dataType" : "number",
+                                "size" : 14,
+                                "startPosition" : 45,
+                                "required" : true,
+                                "description" : ""
+                            }                       
+                            ,               
+                            {
+                                "order" : 8,
+                                "name" : "FILLER",
+                                "dataType" : "string",
+                                "size" : 112,
+                                "startPosition" : 59,
+                                "required" : true,
+                                "description" : ""
+                            }]                       
+                 
                     }
-             ]
-    }
+                    , 
+                    {
+                        "id" : "355",
+                        "name" : "Total de documentos de cobrança",
+                        "length" : 170,
+                        "repeat" : 1,
+                        "startPosition" : 1,
+                        "size" : 3,
+                        "fields" : [
+                            {
+                                "order" : 1,
+                                "name" : "Identificador de registro",
+                                "dataType" : "number",
+                                "size" : 3,
+                                "startPosition" : 1,
+                                "required" : true,
+                                "description" : "353"
+                            },                    
+                            {
+                                "order" : 2,
+                                "name" : "Qtd Total Dctos de Cobrança",
+                                "dataType" : "number",
+                                "size" : 4,
+                                "startPosition" : 4,
+                                "required" : true,
+                                "description" : "355"
+                            },                                                
+                            {
+                                "order" : 3,
+                                "name" : "Valor Total dos Dctos de  Cobrança",
+                                "dataType" : "number",
+                                "size" : 15,
+                                "startPosition" : 8,
+                                "required" : true,
+                                "description" : "355"
+                            },                                                  
+                            {
+                                "order" : 4,
+                                "name" : "Filler",
+                                "dataType" : "string",
+                                "size" : 148,
+                                "startPosition" : 23,
+                                "required" : true,
+                                "description" : "355"
+                            } 
+                        ]
+                    }
+                ]
+            }   
 }
